@@ -11,4 +11,4 @@ tags:
 >
 > Numbers larger or more precise will be capped or rounded up. (E.g.: 0.1m will rounded up to 1m.) This may be extended in the future if we require larger or smaller quantities.
 
-那么对于 `uint64` 类型的数值，其表示范围为 $0\\sim 2^{64}-1$，但没有涵盖在 Quantity 的范围内。
+那么对于 `uint64` 类型的数值，其表示范围为 $0\sim 2^{64}-1$，但没有涵盖在 Quantity 的范围内。

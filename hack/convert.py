@@ -5,9 +5,11 @@ import shutil
 from markdown_it import MarkdownIt
 from markdown_it.token import Token
 from mdit_py_plugins import front_matter
+from mdit_py_plugins import texmath
 from mdformat.renderer import MDRenderer
 import mdformat_tables
 import mdformat_frontmatter
+import mdformat_myst
 from markdown_it.rules_inline import StateInline
 
 
@@ -58,6 +60,7 @@ def wiki_link_plugin(md: MarkdownIt) -> None:
 
 md = MarkdownIt()
 md.use(front_matter.front_matter_plugin)
+md.use(texmath.texmath_plugin)
 md.use(wiki_link_plugin)
 
 
@@ -93,9 +96,11 @@ def convert_wiki_to_link(token, file_index: dict, current_dir) -> Token:
         # if there is an anchor, add it to the relative path
         if anchor:
             relative_path += f"#{anchor}"
+        # if token.type == "wiki_preview", but the filename does not contain ext, should not preview
+        should_not_preview = token.type == "wiki_link" or "." not in filename
         new_markdown_str = (
             f"[{token.content}]({relative_path})"
-            if token.type == "wiki_link"
+            if should_not_preview
             else f"![{token.content}]({relative_path})"
         )
         new_tokens = md.parse(new_markdown_str)
@@ -155,7 +160,9 @@ def process_file(input_path, output_path, file_index: dict, current_dir):
     tokens = md.parse(content)
     traverse_tokens(tokens, file_index, current_dir)
     renderer = MDRenderer()
-    options = {"parser_extension": [mdformat_tables, mdformat_frontmatter]}
+    options = {
+        "parser_extension": [mdformat_tables, mdformat_frontmatter, mdformat_myst]
+    }
     env = {}
 
     output_markdown = renderer.render(tokens, options, env)

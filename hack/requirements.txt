@@ -2,3 +2,4 @@ markdown-it-py
 mdformat
 mdformat_tables
 mdformat_frontmatter
+mdformat_myst

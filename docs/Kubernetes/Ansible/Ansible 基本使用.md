@@ -6,7 +6,7 @@ is_public: true
 
 ## 系统环境准备
 
-![Zsh 配置](../../Software/Linux/Zsh%20%E9%85%8D%E7%BD%AE.md)
+[Zsh 配置](../../Software/Linux/Zsh%20%E9%85%8D%E7%BD%AE.md)
 
 ## Ansible 安装
 
