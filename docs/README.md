@@ -1,8 +1,8 @@
 ---
-title: README
 created_at: 2025-01-09
 is_public: true
 slug: /
+sidebar_position: '0'
 ---
 
 ## Hello There 👋
@@ -20,4 +20,3 @@ slug: /
 ## Tech Stack 💻
 
 [![skillicons](https://skillicons.dev/icons?i=kubernetes,docker,grafana,prometheus,go,cpp,rust,ts,python,ruby,bash,postgres,mysql,mongodb,pnpm,react,tailwind,tauri&perline=9)](https://github.com/anuraghazra/github-readme-stats#gh-dark-mode-only)
-[![skillicons](https://skillicons.dev/icons?i=kubernetes,docker,grafana,prometheus,go,cpp,rust,ts,python,ruby,bash,postgres,mysql,mongodb,pnpm,react,tailwind,tauri&perline=9&theme=light)](https://github.com/anuraghazra/github-readme-stats#gh-light-mode-only)

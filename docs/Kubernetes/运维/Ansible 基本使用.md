@@ -10,8 +10,6 @@ is_public: true
 
 ## Ansible 安装
 
-> [!quote] Anisible 基础使用
-
 ### 清单文件
 
 Ansible 使用一个文本文件来定义要管理的服务器列表，这个文件被称为主机清单。默认情况下，Ansible 会查找  `/etc/ansible/hosts`  文件作为主机清单。
