@@ -60,7 +60,7 @@ I0104 14:21:37.300947       1 event.go:389] "Event occurred" object="rook-ceph/t
 
 在搜索的过程中，我主要分成了两部分来源：来自 Ceph-CSI 项目，以及 Rook 项目。
 
-> [!quote] 相关资料
+> [!NOTE]
 >
 > ### Ceph-CSI
 >
@@ -95,7 +95,7 @@ $ ceph auth get client.csi-cephfs-provisioner
 
 ### 2. 应用程序标记没有在文件系统的数据和元数据池上正确设置
 
-> [!quote] https://github.com/ceph/ceph-csi/issues/4962
+> [!NOTE] https://github.com/ceph/ceph-csi/issues/4962
 
 首先，参考 [My guess is that the application tags weren't properly set on the file system's data and metadata pools](https://github.com/rook/rook/issues/9227#issuecomment-979515205) 这条评论，我查看了 Ceph 上的文件系统：
 

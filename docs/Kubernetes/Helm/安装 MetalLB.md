@@ -11,7 +11,7 @@ tags:
 
 ### 通过 Helm 安装
 
-> [!quote] MetalLB
+> [!NOTE]
 >
 > - [Installation :: MetalLB, bare metal load-balancer for Kubernetes](https://metallb.universe.tf/installation/#installation-with-helm)
 
@@ -27,7 +27,7 @@ helm upgrade --install metallb metallb/metallb \
 
 ### 配置 IP 地址池并广播通告集群
 
-> [!quote]
+> [!NOTE]
 >
 > - [15 分钟部署 kubernetes+Metallb+Ingress-nginx+Rancher15 分钟部署 Kuberne - 掘金](https://juejin.cn/post/7236668895866929189)
 
@@ -50,4 +50,4 @@ metadata:
 
 ## MetalLB 工作原理
 
-> [!quote] [Site Unreachable](https://www.lixueduan.com/posts/cloudnative/01-metallb/)
+> [!NOTE] [Site Unreachable](https://www.lixueduan.com/posts/cloudnative/01-metallb/)

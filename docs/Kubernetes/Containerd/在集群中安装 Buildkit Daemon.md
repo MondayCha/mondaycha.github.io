@@ -6,13 +6,13 @@ tags:
   - buildkit
 ---
 
-> [!quote] [Speeding up CI in Kubernetes with Docker and Buildkit](https://medium.com/vouchercodes-tech/speeding-up-ci-in-kubernetes-with-docker-and-buildkit-7890bc47c21a)
+> [!NOTE] [Speeding up CI in Kubernetes with Docker and Buildkit](https://medium.com/vouchercodes-tech/speeding-up-ci-in-kubernetes-with-docker-and-buildkit-7890bc47c21a)
 
 ## 安装 DaemonSet
 
 ### 生成自签名证书
 
-> [!quote] [buildkit/examples/kubernetes/create-certs.sh at master · moby/buildkit · GitHub](https://github.com/moby/buildkit/blob/master/examples/kubernetes/create-certs.sh)
+> [!NOTE] [buildkit/examples/kubernetes/create-certs.sh at master · moby/buildkit · GitHub](https://github.com/moby/buildkit/blob/master/examples/kubernetes/create-certs.sh)
 
 首先需要生成自签名证书，避免未授权的服务使用我们的镜像打包服务。我们预期将 DaemonSet 部署为 `crater-images` 命名空间下的 `buildkitd` 服务，故脚本命令如下：
 
@@ -26,7 +26,7 @@ buildkitd.crater-images.svc.cluster.local \
 
 ### 配置 Buildkit DaemonSet
 
-> [!quote] [buildkitd.toml](https://docs.docker.com/build/buildkit/toml-configuration/)
+> [!NOTE] [buildkitd.toml](https://docs.docker.com/build/buildkit/toml-configuration/)
 
 编辑 ComfigMap。
 

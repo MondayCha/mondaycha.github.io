@@ -6,7 +6,7 @@ tags:
   - kwok
 ---
 
-> [!quote] KubeCon
+> [!NOTE]
 >
 > - PPT：[KubeCon + CloudNativeCon + Open Source Summit + AI_dev China 2024: Keynote: Supporting Large-Scale and Reli...](https://kccncossaidevchn2024.sched.com/event/1eYYX/keynote-supporting-large-scale-and-reliability-testing-in-kubernetes-using-kwok-mo-3hxi-nanokuberneteszhi-kwokmao-chan-mao-reliao-mao-yuan-chen-nvidia-shiming-zhang-daocloud)
 > - Video：[Keynote: Supporting Large-Scale and Reliability Testing in Kubernetes using Kwok | Yuan Chen & Shiming Zhang](https://youtu.be/zBKBhFxgWSo)

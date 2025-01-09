@@ -6,7 +6,7 @@ tags:
   - nerdctl
 ---
 
-> [!quote] 参考资料
+> [!NOTE]
 >
 > - [Strategy contianer in container with contianerd](https://github.com/containerd/nerdctl/discussions/1090)
 > - [nerdctl can not run command when inside the nerdctl containers](https://github.com/containerd/nerdctl/issues/272#issuecomment-869650213)

@@ -1,5 +1,6 @@
 markdown-it-py
+mdit-py-plugins
 mdformat
-mdformat_tables
-mdformat_frontmatter
-mdformat_myst
+mdformat-tables
+mdformat-frontmatter
+mdformat-myst

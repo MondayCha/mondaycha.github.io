@@ -6,7 +6,7 @@ tags:
   - kubernetes
 ---
 
-> [!quote] [Quantity](https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/quantity/)
+> [!NOTE] [Quantity](https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/quantity/)
 > No matter which of the three exponent forms is used, no quantity may represent a number greater than $2^{63}-1$ in magnitude, nor may it have more than 3 decimal places.
 >
 > Numbers larger or more precise will be capped or rounded up. (E.g.: 0.1m will rounded up to 1m.) This may be extended in the future if we require larger or smaller quantities.

@@ -6,7 +6,7 @@ tags:
   - kubernetes
 ---
 
-> [!quote] [单元测试和集成测试 · Kubernetes 中文指南——云原生应用架构实战手册](https://jimmysong.io/kubernetes-handbook/develop/testing.html)
+> [!NOTE] [单元测试和集成测试 · Kubernetes 中文指南——云原生应用架构实战手册](https://jimmysong.io/kubernetes-handbook/develop/testing.html)
 
 ## End to End (e2e)测试
 

@@ -1,4 +1,5 @@
 import { themes as prismThemes } from "prism-react-renderer";
+import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-directives";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import tailwindPlugin from "./plugins/tailwind-config.cjs";
@@ -37,7 +38,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "zh-CN",
-    locales: ["zh-CN", "en-US"],
+    locales: ["zh-CN"],
   },
 
   presets: [
@@ -47,6 +48,9 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           routeBasePath: '/',
+          beforeDefaultRemarkPlugins: [
+            remarkGithubAdmonitionsToDirectives
+          ],
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
           // Please change this to your repo.
@@ -93,12 +97,18 @@ const config: Config = {
           label: "知识库",
         },
         { to: "/blog", label: "阅读", position: "left" },
+        // github icon
+        {
+          href: 'https://github.com/MondayCha',
+          label: 'GitHub',
+          position: 'right',
+        },
       ],
     },
-    footer: {
-      style: "dark",
-      copyright: `Built with Docusaurus.`,
-    },
+    // footer: {
+    //   style: "dark",
+    //   copyright: `Built with Docusaurus.`,
+    // },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
@@ -107,14 +117,6 @@ const config: Config = {
 
   // ... Your other configurations.
   themes: [
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-      {
-        hashed: true,
-        language: ["en", "zh"],
-      },
-    ],
     "@docusaurus/theme-mermaid",
   ],
   stylesheets: [

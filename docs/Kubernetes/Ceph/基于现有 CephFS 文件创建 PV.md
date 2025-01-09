@@ -6,7 +6,7 @@ tags:
   - ceph
 ---
 
-> [!quote]
+> [!NOTE]
 >
 > - [ceph-csi/docs/static-pvc.md at devel · ceph/ceph-csi · GitHub](https://github.com/ceph/ceph-csi/blob/devel/docs/static-pvc.md)
 > - [Create PV manually · rook/rook · Discussion #8861 · GitHub](https://github.com/rook/rook/discussions/8861)

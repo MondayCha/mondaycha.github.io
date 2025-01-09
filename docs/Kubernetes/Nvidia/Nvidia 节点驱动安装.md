@@ -4,7 +4,7 @@ created_at: 2025-01-09
 is_public: true
 ---
 
-> [!note] 后续采用 GPU Operator 统一管理
+> [!NOTE] 后续采用 GPU Operator 统一管理
 
 ```shell
 #查看服务器是否有gpu

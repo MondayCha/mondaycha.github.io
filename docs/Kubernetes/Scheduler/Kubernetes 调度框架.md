@@ -7,4 +7,4 @@ tags:
   - scheduler
 ---
 
-> [!quote] [K8s 调度框架设计与 scheduler plugins 开发部署示例（2024）](https://arthurchiao.art/blog/k8s-scheduling-plugins-zh/)
+> [!NOTE] [K8s 调度框架设计与 scheduler plugins 开发部署示例（2024）](https://arthurchiao.art/blog/k8s-scheduling-plugins-zh/)

@@ -93,6 +93,7 @@ def convert_wiki_to_link(token, file_index: dict, current_dir) -> Token:
         relative_path = os.path.relpath(file_path, current_dir)
         # if relative path contains spaces, convert " " to "%20"
         relative_path = relative_path.replace(" ", "%20")
+        relative_path = relative_path.replace("\\", "/")
         # if there is an anchor, add it to the relative path
         if anchor:
             relative_path += f"#{anchor}"
@@ -128,13 +129,38 @@ def format_front_matter(text):
     return text
 
 
+def format_callout(text):
+    # # GitHub (Only 5)
+    # [!NOTE]
+    # [!TIP]
+    # [!WARNING]
+    # [!IMPORTANT]
+    # [!CAUTION]
+
+    # convert obsidian style callouts to github style alerts
+    text = re.sub(r"\[!note\]", r"[!NOTE]", text)
+    text = re.sub(r"\[!abstract\]", r"[!NOTE]", text)
+    text = re.sub(r"\[!info\]", r"[!NOTE]", text)
+    text = re.sub(r"\[!todo\]", r"[!NOTE]", text)
+    text = re.sub(r"\[!quote\]", r"[!NOTE]", text)
+    text = re.sub(r"\[!cite\]", r"[!NOTE]", text)
+    text = re.sub(r"\[!tip\]", r"[!TIP]", text)
+    text = re.sub(r"\[!success\]", r"[!TIP]", text)
+    text = re.sub(r"\[!question\]", r"[!TIP]", text)
+    text = re.sub(r"\[!example\]", r"[!TIP]", text)
+    text = re.sub(r"\[!warning\]", r"[!WARNING]", text)
+    text = re.sub(r"\[!failure\]", r"[!WARNING]", text)
+    text = re.sub(r"\[!danger\]", r"[!CAUTION]", text)
+    text = re.sub(r"\[!bug\]", r"[!CAUTION]", text)
+    return text
+
+
 def traverse_tokens(tokens: list[Token], file_index, current_dir, depth=0):
     if tokens is None:
         return
     for token in tokens:
         if token.type == "front_matter":
-            new_content = format_front_matter(token.content)
-            token.content = new_content
+            token.content = format_front_matter(token.content)
         elif token.type == "wiki_link" or token.type == "wiki_preview":
             new_token = convert_wiki_to_link(token, file_index, current_dir)
             token.type = new_token.type
@@ -150,6 +176,8 @@ def traverse_tokens(tokens: list[Token], file_index, current_dir, depth=0):
             token.meta = new_token.meta
             token.block = new_token.block
             token.hidden = new_token.hidden
+        elif token.type == "text":
+            token.content = format_callout(token.content)
         else:
             traverse_tokens(token.children, file_index, current_dir, depth + 1)
 
@@ -161,7 +189,11 @@ def process_file(input_path, output_path, file_index: dict, current_dir):
     traverse_tokens(tokens, file_index, current_dir)
     renderer = MDRenderer()
     options = {
-        "parser_extension": [mdformat_tables, mdformat_frontmatter, mdformat_myst]
+        "parser_extension": [
+            mdformat_tables.plugin,
+            mdformat_frontmatter.plugin,
+            mdformat_myst.plugin,
+        ]
     }
     env = {}
 

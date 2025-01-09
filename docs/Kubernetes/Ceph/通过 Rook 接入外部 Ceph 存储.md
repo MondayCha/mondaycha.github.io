@@ -6,7 +6,7 @@ tags:
   - ceph
 ---
 
-> [!quote] [Import Ceph configuration to the Rook consumer cluster - Rook Ceph Documentation](https://rook.io/docs/rook/latest-release/CRDs/Cluster/external-cluster/consumer-import/#installation-types)
+> [!NOTE] [Import Ceph configuration to the Rook consumer cluster - Rook Ceph Documentation](https://rook.io/docs/rook/latest-release/CRDs/Cluster/external-cluster/consumer-import/#installation-types)
 
 ## 从 Ceph 导出配置
 
@@ -16,7 +16,7 @@ tags:
 
 ### Ceph 创建 RBD
 
-> [!quote] 管理节点
+> [!NOTE]
 >
 > ```
 > ssh liyilong@192.168.5.241

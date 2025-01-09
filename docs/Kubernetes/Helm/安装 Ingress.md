@@ -13,7 +13,7 @@ tags:
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 ```
 
-> [!todo]
+> [!NOTE]
 >
 > 1. 应该指定版本
 > 1. 需要修改节点名称、IP 等

@@ -4,7 +4,7 @@ created_at: 2024-12-02
 is_public: true
 ---
 
-> [!quote] [postgres-cluster-with-replica-on-k8s](https://medium.com/@rammurthys_32117/postgres-cluster-with-replica-on-k8s-7a676abb3828)
+> [!NOTE] [postgres-cluster-with-replica-on-k8s](https://medium.com/@rammurthys_32117/postgres-cluster-with-replica-on-k8s-7a676abb3828)
 
 ## 安装 OpenEBS
 
@@ -112,7 +112,7 @@ helm upgrade --install openebs --namespace openebs openebs/openebs --create-name
 
 测试 PVC 的使用。
 
-> [!quote] [OpenEBS Local PV Hostpath User Guide | OpenEBS Docs](https://openebs.io/docs/2.12.x/user-guides/localpv-hostpath)
+> [!NOTE] [OpenEBS Local PV Hostpath User Guide | OpenEBS Docs](https://openebs.io/docs/2.12.x/user-guides/localpv-hostpath)
 
 ```yaml
 kind: PersistentVolumeClaim

@@ -49,7 +49,7 @@ kind delete cluster --name kwok
 
 在 Kind 集群中安装最新版的 Kwok：
 
-> [!quote]
+> [!NOTE]
 >
 > - Helm Chart: [kwok 0.1.1 · kwok/kwok](https://artifacthub.io/packages/helm/kwok/kwok)
 > - 在集群中安装：[\`kwok\` in Cluster | KWOK](https://kwok.sigs.k8s.io/docs/user/kwok-in-cluster/)
@@ -65,7 +65,7 @@ helm upgrade --install kwok-metrics kwok/metrics-usage
 
 ## Metrics Server
 
-> [!quote] [安装 Metrics Server](../Helm/%E5%AE%89%E8%A3%85%20Metrics%20Server.md)
+> [!NOTE] [安装 Metrics Server](../Helm/%E5%AE%89%E8%A3%85%20Metrics%20Server.md)
 
 为了支持查看 Pod 的使用率信息，还需要安装 Metrics Server：
 

@@ -4,4 +4,4 @@ created_at: 2025-01-04
 is_public: true
 ---
 
-> [!quote] [docs.nebius.com/kubernetes/gpu/nccl-test](https://docs.nebius.com/kubernetes/gpu/nccl-test)
+> [!NOTE] [docs.nebius.com/kubernetes/gpu/nccl-test](https://docs.nebius.com/kubernetes/gpu/nccl-test)

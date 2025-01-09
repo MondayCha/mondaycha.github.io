@@ -6,7 +6,7 @@ is_public: true
 
 在 Nvidia Device Plugin 的文档中，有这样一段话：
 
-> [!warning]
+> [!WARNING]
 > If you do not request GPUs when you use the device plugin, the plugin exposes all the GPUs on the machine inside your container.
 
 很久以前，沃老师让我确认过这个问题，当时我发现，在 Jupyter Base Notebook 的容器中，当 Pod 不申请 GPU 资源时，在容器内看不到 GPU。
@@ -15,7 +15,7 @@ is_public: true
 
 ## 问题描述
 
-> [!quote]
+> [!NOTE]
 >
 > > [Read list of GPU devices from volume mounts instead of NVIDIA_VISIBLE_DEVICES](https://docs.google.com/document/d/1uXVF-NWZQXgP1MLb87_kMkQvidpnkNWicdpO2l9g-fw/edit?tab=t.0#)
 >
@@ -71,7 +71,7 @@ all
 
 当然，这个情况并非只有负面作用，例如用户希望让不同的 Pod 共享 GPU 硬件资源；或者是对于 device plugin pod 这样的胶水组件。但对于普通的使用 GPU 资源的用户，我们需要限制这一情况。
 
-> [!quote] [Requesting zero GPUs allocates all GPUs · Issue #61 · NVIDIA/k8s-device-plugin](https://github.com/NVIDIA/k8s-device-plugin/issues/61)
+> [!NOTE] [Requesting zero GPUs allocates all GPUs · Issue #61 · NVIDIA/k8s-device-plugin](https://github.com/NVIDIA/k8s-device-plugin/issues/61)
 
 为此，我们可以将 Pod 读取 GPU 信息的方式从环境变量修改为从 VolumeMount。参考 Issue 近期的讨论，修改 GPU-Operator `values.yaml` 文件：
 

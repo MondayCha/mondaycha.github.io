@@ -76,7 +76,7 @@ ansible all -m ping
 
 ### OpenEBS HostPath
 
-> [!quote] [Installation | OpenEBS Docs](https://openebs.io/docs/user-guides/local-storage-user-guide/local-pv-hostpath/hostpath-installation#prerequisites)
+> [!NOTE] [Installation | OpenEBS Docs](https://openebs.io/docs/user-guides/local-storage-user-guide/local-pv-hostpath/hostpath-installation#prerequisites)
 
 用于创建 HostPath 路径的 Playbook：
 

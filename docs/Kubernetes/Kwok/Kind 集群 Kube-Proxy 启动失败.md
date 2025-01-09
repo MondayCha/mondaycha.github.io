@@ -35,7 +35,7 @@ $ k logs kube-proxy-cvmc8
 E1214 11:54:31.203455       1 run.go:72] "command failed" err="failed complete: too many open files"
 ```
 
-> [!quote] [kind – Known Issues](https://kind.sigs.k8s.io/docs/user/known-issues/#pod-errors-due-to-too-many-open-files)
+> [!NOTE] [kind – Known Issues](https://kind.sigs.k8s.io/docs/user/known-issues/#pod-errors-due-to-too-many-open-files)
 
 这可能是由于  [inotify](https://linux.die.net/man/7/inotify)  资源不足造成的。资源限制由  `fs.inotify.max_user_watches`  和  `fs.inotify.max_user_instances`  系统变量定义。例如，在 Ubuntu 中，这些默认值分别为 8192 和 128，这不足以创建具有许多节点的集群。
 

@@ -25,8 +25,6 @@ conda activate sakura
 
 ### 换源
 
-Python 环境配置
-
 ```powershell
 # aliyun
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/

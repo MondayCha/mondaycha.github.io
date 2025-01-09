@@ -12,7 +12,7 @@ tags:
 
 ## 现有方案
 
-> [!quote]
+> [!NOTE]
 >
 > - [Hello from Obsidiosaurus | Obsidiosaurus](https://cimsta.github.io/obsidiosaurus-docs/)
 > - [Setup · chanjunren/vaultusaurus Wiki · GitHub](https://github.com/chanjunren/vaultusaurus/wiki/Setup)
@@ -37,7 +37,7 @@ tags:
 
 ## 可行性分析
 
-> [!abstract]
+> [!NOTE]
 > 如果要自己重新开发的话，必要性在哪，如何实现
 
 ### 为什么还要自己造轮子？
@@ -47,13 +47,13 @@ tags:
 
 ### 如何在 Obsidian 中操作主机的其他文件？
 
-> [!quote] [How can I execute an external command and return results to Obsidian? - Help - Obsidian Forum](https://forum.obsidian.md/t/how-can-i-execute-an-external-command-and-return-results-to-obsidian/48249)
+> [!NOTE] [How can I execute an external command and return results to Obsidian? - Help - Obsidian Forum](https://forum.obsidian.md/t/how-can-i-execute-an-external-command-and-return-results-to-obsidian/48249)
 
 感觉上是非常危险的行为，但似乎真的可行。
 
 ### 如何解析 Markdown 格式语法
 
-> [!quote]
+> [!NOTE]
 >
 > - [pulldown-cmark](https://github.com/pulldown-cmark/pulldown-cmark)
 > - [GitHub - kivikakk/comrak: CommonMark + GFM compatible Markdown parser and renderer](https://github.com/kivikakk/comrak)

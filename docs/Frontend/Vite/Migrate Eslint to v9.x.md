@@ -19,6 +19,6 @@ This will create a starting point for your `eslint.config.js` file but is not 
 
 ## Vite Eslint
 
-> [!quote] [Vite React TS](https://github.com/vitejs/vite/pull/12860/files#diff-950973748bff2ec59e433693cdbc86cede712da122a2b35b43fab32db098afa8)
+> [!NOTE] [Vite React TS](https://github.com/vitejs/vite/pull/12860/files#diff-950973748bff2ec59e433693cdbc86cede712da122a2b35b43fab32db098afa8)
 
 参考文件修改，终于不报错了。

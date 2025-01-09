@@ -33,7 +33,7 @@ helm upgrade --install database \
 
 ### 连接到数据库
 
-> [!quote] [Connecting from an application - CloudNativePG v1.24](https://cloudnative-pg.io/documentation/current/applications/)
+> [!NOTE] [Connecting from an application - CloudNativePG v1.24](https://cloudnative-pg.io/documentation/current/applications/)
 
 首先查看 Secret 中的账户密码：
 

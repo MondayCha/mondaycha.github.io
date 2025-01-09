@@ -4,7 +4,7 @@ created_at: 2024-11-22
 is_public: true
 ---
 
-> [!quote] [Managing Go installations - The Go Programming Language](https://go.dev/doc/manage-install#installing-multiple)
+> [!NOTE] [Managing Go installations - The Go Programming Language](https://go.dev/doc/manage-install#installing-multiple)
 
 您可以在同一台计算机上安装多个 Go 版本。例如，您可能希望在多个 Go 版本上测试您的代码。有关您可以通过这种方式安装的版本列表，请参阅下载页面。
 

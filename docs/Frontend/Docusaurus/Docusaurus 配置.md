@@ -9,7 +9,7 @@ tags:
 
 ## Docusaurus 配置
 
-> [!quote] [安装流程 | Docusaurus](https://docusaurus.io/zh-CN/docs/installation)
+> [!NOTE] [安装流程 | Docusaurus](https://docusaurus.io/zh-CN/docs/installation)
 
 ### 1. 初始化
 
@@ -51,7 +51,7 @@ Happy building awesome websites!
 
 ## 结合 TailwindCSS
 
-> [!quote] 相关讨论
+> [!NOTE]
 >
 > - [Open-sourcing our progress on Tailwind CSS v4.0 - Tailwind CSS](https://tailwindcss.com/blog/tailwindcss-v4-alpha)
 > - [New Tailwind theme · Issue #2961 · facebook/docusaurus · GitHub](https://github.com/facebook/docusaurus/issues/2961)

@@ -4,7 +4,7 @@ created_at: 2024-12-02
 is_public: true
 ---
 
-> [!quote] [ohmyzsh.git | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror](https://mirrors.tuna.tsinghua.edu.cn/help/ohmyzsh.git/)
+> [!NOTE] [ohmyzsh.git | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror](https://mirrors.tuna.tsinghua.edu.cn/help/ohmyzsh.git/)
 
 ```shell
 apt install zsh git

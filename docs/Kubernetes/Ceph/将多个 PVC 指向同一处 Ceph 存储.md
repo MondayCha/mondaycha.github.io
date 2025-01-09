@@ -7,7 +7,7 @@ tags:
   - ai-assisted
 ---
 
-> [!quote] [Filesystem Storage Overview - Rook Ceph Documentation](https://rook.io/docs/rook/latest-release/Storage-Configuration/Shared-Filesystem-CephFS/filesystem-storage/#consume-the-shared-filesystem-across-namespaces)
+> [!NOTE] [Filesystem Storage Overview - Rook Ceph Documentation](https://rook.io/docs/rook/latest-release/Storage-Configuration/Shared-Filesystem-CephFS/filesystem-storage/#consume-the-shared-filesystem-across-namespaces)
 
 ## 跨命名空间共享文件系统
 

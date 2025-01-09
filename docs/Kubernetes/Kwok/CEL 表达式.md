@@ -9,7 +9,7 @@ tags:
 
 ## CEL 表达式
 
-> [!quote] [Kubernetes 中的通用表达式语言 | Kubernetes](https://kubernetes.io/zh-cn/docs/reference/using-api/cel/)
+> [!NOTE] [Kubernetes 中的通用表达式语言 | Kubernetes](https://kubernetes.io/zh-cn/docs/reference/using-api/cel/)
 
 [通用表达式语言 (Common Expression Language, CEL)](https://github.com/google/cel-go)  用于声明 Kubernetes API 的验证规则、策略规则和其他限制或条件。
 
@@ -17,7 +17,7 @@ CEL 表达式在  [API 服务器](https://kubernetes.io/zh-cn/docs/concepts/arc
 
 ## 基本语法
 
-> [!quote]
+> [!NOTE]
 >
 > - CEL 官方仓库：[GitHub - google/cel-spec: Common Expression Language -- specification and binary representation](https://github.com/google/cel-spec)
 > - Google Codelab 教程：[CEL-Go Codelab：快速、安全的嵌入式表达式](https://codelabs.developers.google.com/codelabs/cel-go?hl=zh-cn#0)
@@ -68,7 +68,7 @@ Values in CEL represent any of the following:
 
 在 Kwok 中，如果希望自定义 Pod/Node Metrics 模拟，就需要用到 CEL 表达式。
 
-> [!quote] [ResourceUsage | KWOK](https://kwok.sigs.k8s.io/docs/user/resource-usage-configuration/#what-is-a-resourceusage)
+> [!NOTE] [ResourceUsage | KWOK](https://kwok.sigs.k8s.io/docs/user/resource-usage-configuration/#what-is-a-resourceusage)
 >
 > With CEL expressions, it is even possible to simulate resource usages dynamically. For example, the following expression yields memory usage that grows linearly with time.
 >

@@ -6,4 +6,4 @@ tags:
   - ceph
 ---
 
-> [!quote] [rook/deploy/examples/toolbox.yaml at master · rook/rook · GitHub](https://github.com/rook/rook/blob/master/deploy/examples/toolbox.yaml)
+> [!NOTE] [rook/deploy/examples/toolbox.yaml at master · rook/rook · GitHub](https://github.com/rook/rook/blob/master/deploy/examples/toolbox.yaml)

@@ -18,7 +18,7 @@ helm install --create-namespace --namespace $clusterNamespace rook-ceph rook-rel
 
 ## 安装 Rook Ceph Cluster
 
-> [!quote] 外部 Ceph 集群对应的 Values
+> [!NOTE] 外部 Ceph 集群对应的 Values
 >
 > - [values-external.yaml](https://github.com/rook/rook/blob/v1.15.6/deploy/charts/rook-ceph-cluster/values-external.yaml)
 

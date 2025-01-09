@@ -9,7 +9,7 @@ tags:
 
 ## 问题描述
 
-> [!quote] [UpdateStatus func would also update label and annotations · Issue #92022 · kubernetes/kubernetes · GitHub](https://github.com/kubernetes/kubernetes/issues/92022)
+> [!NOTE] [UpdateStatus func would also update label and annotations · Issue #92022 · kubernetes/kubernetes · GitHub](https://github.com/kubernetes/kubernetes/issues/92022)
 > The original approach to subresources was only concerned with preventing changes to spec and status via the respective endpoints. Changes to metadata were allowed via either endpoint. That is the case for most of the types defined early on in Kubernetes.
 >
 > Changes to metadata via status subresources were restricted in some later types, notably custom resource types.
