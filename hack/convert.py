@@ -212,7 +212,10 @@ def process_files(input_dir, output_dir, file_index: dict):
             relative_path = os.path.relpath(input_path, input_dir)
             output_path = os.path.join(output_dir, relative_path)
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
-            if file.endswith(".md"):
+            if file.endswith(".excalidraw.md"):
+                # ignore excalidraw files
+                continue
+            elif file.endswith(".md"):
                 process_file(input_path, output_path, file_index, root)
             else:
                 shutil.copy2(input_path, output_path)
