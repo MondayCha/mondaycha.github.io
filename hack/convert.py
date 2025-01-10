@@ -159,6 +159,7 @@ def traverse_tokens(tokens: list[Token], file_index, current_dir, depth=0):
     if tokens is None:
         return
     for token in tokens:
+        # print("  " * depth, token.type, " | ", token.content)
         if token.type == "front_matter":
             token.content = format_front_matter(token.content)
         elif token.type == "wiki_link" or token.type == "wiki_preview":
@@ -178,6 +179,8 @@ def traverse_tokens(tokens: list[Token], file_index, current_dir, depth=0):
             token.hidden = new_token.hidden
         elif token.type == "text":
             token.content = format_callout(token.content)
+        elif token.type == "math_single":
+            token.type = "math_inline"
         else:
             traverse_tokens(token.children, file_index, current_dir, depth + 1)
 
