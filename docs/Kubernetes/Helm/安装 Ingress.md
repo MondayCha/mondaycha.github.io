@@ -60,6 +60,21 @@ NAME            NAMESPACE       REVISION        UPDATED                         
 ingress-nginx   ingress-nginx   1               2024-11-22 00:14:58.367491 +0800 CST    deployed        ingress-nginx-4.11.3    1.11.3
 ```
 
+### Crater 测试集群
+
+```yaml
+helm upgrade --install ingress-nginx ingress-nginx/ingress-nginx \
+--namespace ingress-nginx-new \
+--create-namespace \
+--set controller.image.registry="harbor.act.buaa.edu.cn/crater" \
+--set controller.image.digest="" \
+--set controller.admissionWebhooks.patch.image.registry="harbor.act.buaa.edu.cn/crater" \
+--set controller.admissionWebhooks.patch.image.digest="" \
+--set controller.allowSnippetAnnotations=true
+```
+
+6595b1857d401122cdd3af77beba638a8f34de43870cc7d1ea471a8f0a55459e
+
 ## 卸载
 
 ```shell

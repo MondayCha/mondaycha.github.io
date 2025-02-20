@@ -8,6 +8,8 @@ tags:
 url: https://github.com/volcano-sh/devices/tree/release-1.1/docs/resource-naming
 ---
 
+> [!NOTE] [Configuring the NVIDIA Device Plugin to report Different GPU Models with Volcano Capacity Scheduling](https://github.com/volcano-sh/devices/tree/release-1.1/docs/resource-naming)
+
 Volcano v1.9.0 introduces capacity scheduling capabilities, allowing you to configure different quotas for various GPU types (essential in production environments). For example:
 
 ```yaml

@@ -2,6 +2,8 @@
 title: 获取 Linux UID GID
 created_at: 2024-12-05
 is_public: true
+tags:
+  - ai-assisted
 ---
 
 以下是支持后台运行的修改版本，我提供两种方法：

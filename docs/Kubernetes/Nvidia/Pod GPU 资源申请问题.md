@@ -9,7 +9,7 @@ is_public: true
 > [!WARNING]
 > If you do not request GPUs when you use the device plugin, the plugin exposes all the GPUs on the machine inside your container.
 
-很久以前，沃老师让我确认过这个问题，当时我发现，在 Jupyter Base Notebook 的容器中，当 Pod 不申请 GPU 资源时，在容器内看不到 GPU。
+很久以前，导师让我确认过这个问题，当时我发现，在 Jupyter Base Notebook 的容器中，当 Pod 不申请 GPU 资源时，在容器内看不到 GPU。
 
 然而，这个问题我想得太简单了。
 
