@@ -20,22 +20,22 @@ UML类图：
 
 **Method复杂度：**
 
-| Method | ev(G) | iv(G) | v(G) |
-| \-------------------------------------------------- | ----- | ----- | ---- |
-| Derivative.main(String[]) | 1 | 1 | 1 |
-| Derivative.printAnswer(HashMap\<BigInteger, Poly>) | 4 | 5 | 7 |
-| Poly.Poly(BigInteger,BigInteger) | 1 | 1 | 1 |
-| Poly.addCoef(BigInteger) | 1 | 1 | 1 |
-| Poly.compareTo(Object) | 1 | 1 | 1 |
-| Poly.derivative() | 1 | 2 | 2 |
-| Poly.equals(Object) | 2 | 2 | 2 |
-| Poly.getCoeff() | 1 | 1 | 1 |
-| Poly.getIndex() | 1 | 1 | 1 |
-| Poly.hashCode() | 1 | 1 | 1 |
-| Poly.toString() | 1 | 11 | 12 |
-| Polynomial.Polynomial(String) | 1 | 1 | 1 |
-| Polynomial.getPolyitem() | 1 | 2 | 2 |
-| Polynomial.getfirstitem() | 1 | 9 | 10 |
+| Method                                             | ev(G) | iv(G) | v(G) |
+| -------------------------------------------------- | ----- | ----- | ---- |
+| Derivative.main(String[])                          | 1     | 1     | 1    |
+| Derivative.printAnswer(HashMap\<BigInteger, Poly>) | 4     | 5     | 7    |
+| Poly.Poly(BigInteger,BigInteger)                   | 1     | 1     | 1    |
+| Poly.addCoef(BigInteger)                           | 1     | 1     | 1    |
+| Poly.compareTo(Object)                             | 1     | 1     | 1    |
+| Poly.derivative()                                  | 1     | 2     | 2    |
+| Poly.equals(Object)                                | 2     | 2     | 2    |
+| Poly.getCoeff()                                    | 1     | 1     | 1    |
+| Poly.getIndex()                                    | 1     | 1     | 1    |
+| Poly.hashCode()                                    | 1     | 1     | 1    |
+| Poly.toString()                                    | 1     | 11    | 12   |
+| Polynomial.Polynomial(String)                      | 1     | 1     | 1    |
+| Polynomial.getPolyitem()                           | 1     | 2     | 2    |
+| Polynomial.getfirstitem()                          | 1     | 9     | 10   |
 
 第一次作业中，化简主要在主类Derivative的printAnswer()方法（将第一个正项优先输出）和Poly类的toString()方法中，printAnswer()涉及对表达式的遍历，基本复杂性高；toString()则包含大量条件语句，多次调用了BigInteger中的方法，循环依赖性高。而表达式解析我采用的是正则+状态机的策略（这个策略三次作业均沿用，感觉还是很舒服的），在getfirstitem()中处理不同类型输入并归一化，代码较为复杂。
 
@@ -69,43 +69,43 @@ UML类图：
 
 **Method复杂度：**
 
-| Method | ev(G) | iv(G) | v(G) |
-| \------------------------------------------------------------ | ----- | ------ | ------ |
-| DeriPrinter.DeriPrinter(HashMap\<String, MutiItem>) | 1 | 7 | 7 |
-| DeriPrinter.getAnswer(HashMap\<String, MutiItem>) | 4 | 5 | 7 |
-| DeriPrinter.printAnswer() | 1 | 2 | 2 |
-| Item.Item(BigInteger,BigInteger,BigInteger) | 1 | 1 | 1 |
-| Item.compareTo(Object) | 3 | 3 | 3 |
-| Item.equals(Object) | 2 | 4 | 4 |
-| Item.getCosin() | 1 | 1 | 1 |
-| Item.getPowin() | 1 | 1 | 1 |
-| Item.getSinin() | 1 | 1 | 1 |
-| Item.hashCode() | 1 | 1 | 1 |
-| Item.toString() | 1 | 5 | 8 |
-| MainClass.main(String[]) | 1 | 1 | 1 |
-| MutiItem.MutiItem(BigInteger,BigInteger,BigInteger,BigInteger) | 1 | 1 | 1 |
-| MutiItem.MutiItem(BigInteger,Item) | 1 | 1 | 1 |
-| MutiItem.addCoeff(BigInteger) | 1 | 1 | 1 |
-| MutiItem.compareTo(Object) | 1 | 1 | 1 |
-| MutiItem.derivate() | 1 | 5 | 5 |
-| MutiItem.equals(Object) | 2 | 2 | 2 |
-| MutiItem.getCoeff() | 1 | 1 | 1 |
-| MutiItem.getCosin() | 1 | 1 | 1 |
-| MutiItem.getIdentity() | 1 | 1 | 1 |
-| MutiItem.getItem() | 1 | 1 | 1 |
-| MutiItem.getPowin() | 1 | 1 | 1 |
-| MutiItem.getSinin() | 1 | 1 | 1 |
-| MutiItem.hashCode() | 1 | 1 | 1 |
-| MutiItem.toString() | 1 | 5 | 5 |
-| ParseExp.MutiItemSign() | 2 | 3 | 4 |
-| ParseExp.ParseExp(String) | 1 | 5 | 6 |
-| ParseExp.WrongFormat(String) | 1 | 1 | 1 |
-| ParseExp.getExpression() | 1 | 2 | 2 |
-| ParseExp.getFirstitem() | 3 | **13** | **14** |
-| Simplify.Simplify(HashMap\<String, MutiItem>) | 1 | 2 | 2 |
-| Simplify.exitmatch(BigInteger,Item,Item,Item,HashMap\<Item, BigInteger>) | 2 | 3 | 4 |
-| Simplify.searchcos(HashMap\<Item, BigInteger>) | **4** | 6 | 9 |
-| Simplify.simplify() | 1 | 3 | 4 |
+| Method                                                                   | ev(G) | iv(G)  | v(G)   |
+| ------------------------------------------------------------------------ | ----- | ------ | ------ |
+| DeriPrinter.DeriPrinter(HashMap\<String, MutiItem>)                      | 1     | 7      | 7      |
+| DeriPrinter.getAnswer(HashMap\<String, MutiItem>)                        | 4     | 5      | 7      |
+| DeriPrinter.printAnswer()                                                | 1     | 2      | 2      |
+| Item.Item(BigInteger,BigInteger,BigInteger)                              | 1     | 1      | 1      |
+| Item.compareTo(Object)                                                   | 3     | 3      | 3      |
+| Item.equals(Object)                                                      | 2     | 4      | 4      |
+| Item.getCosin()                                                          | 1     | 1      | 1      |
+| Item.getPowin()                                                          | 1     | 1      | 1      |
+| Item.getSinin()                                                          | 1     | 1      | 1      |
+| Item.hashCode()                                                          | 1     | 1      | 1      |
+| Item.toString()                                                          | 1     | 5      | 8      |
+| MainClass.main(String[])                                                 | 1     | 1      | 1      |
+| MutiItem.MutiItem(BigInteger,BigInteger,BigInteger,BigInteger)           | 1     | 1      | 1      |
+| MutiItem.MutiItem(BigInteger,Item)                                       | 1     | 1      | 1      |
+| MutiItem.addCoeff(BigInteger)                                            | 1     | 1      | 1      |
+| MutiItem.compareTo(Object)                                               | 1     | 1      | 1      |
+| MutiItem.derivate()                                                      | 1     | 5      | 5      |
+| MutiItem.equals(Object)                                                  | 2     | 2      | 2      |
+| MutiItem.getCoeff()                                                      | 1     | 1      | 1      |
+| MutiItem.getCosin()                                                      | 1     | 1      | 1      |
+| MutiItem.getIdentity()                                                   | 1     | 1      | 1      |
+| MutiItem.getItem()                                                       | 1     | 1      | 1      |
+| MutiItem.getPowin()                                                      | 1     | 1      | 1      |
+| MutiItem.getSinin()                                                      | 1     | 1      | 1      |
+| MutiItem.hashCode()                                                      | 1     | 1      | 1      |
+| MutiItem.toString()                                                      | 1     | 5      | 5      |
+| ParseExp.MutiItemSign()                                                  | 2     | 3      | 4      |
+| ParseExp.ParseExp(String)                                                | 1     | 5      | 6      |
+| ParseExp.WrongFormat(String)                                             | 1     | 1      | 1      |
+| ParseExp.getExpression()                                                 | 1     | 2      | 2      |
+| ParseExp.getFirstitem()                                                  | 3     | **13** | **14** |
+| Simplify.Simplify(HashMap\<String, MutiItem>)                            | 1     | 2      | 2      |
+| Simplify.exitmatch(BigInteger,Item,Item,Item,HashMap\<Item, BigInteger>) | 2     | 3      | 4      |
+| Simplify.searchcos(HashMap\<Item, BigInteger>)                           | **4** | 6      | 9      |
+| Simplify.simplify()                                                      | 1     | 3      | 4      |
 
 由于一开始并没有明确的化简思路，在第一遍实现了基本求导功能的代码通过中测之后，我为了实现化简功能，又对代码内类的结构做了很多修改，在这一过程中，尽管我确实用类将表达式中的Item与MulItem做了封装，但我却胡乱修改内部方法，这并不符合面向对象的思想，也导致最后代码可读性极差，也为互测时被发现的Bug埋下了祸根。具体表现到MetricReloaded的分析上，就是ParseExp类的getFirstitem()依然是复杂度重灾区，没有采用工厂模式也使得它与其他类的依赖极为严重，优化输出的内容依然有很高的基本复杂性。
 
@@ -160,123 +160,123 @@ public MutiItem(BigInteger a, BigInteger b, BigInteger c, BigInteger d) {
 
 **Method复杂度：**
 
-| Method | ev(G) | iv(G) | v(G) |
-| \------------------------------------------------------------ | ----- | ----- | ---- |
-| homework.MainClass.main(String[]) | 1 | 2 | 2 |
-| homework.expression.ExpFunction.Exception.Exception(String) | 1 | 1 | 1 |
-| homework.expression.ExpFunction.deleteSpace(String) | 3 | 7 | 10 |
-| homework.expression.ExpFunction.matchParentheses(String,int) | 6 | 6 | 7 |
-| homework.expression.ExpFunction.readIndex(String) | 2 | 1 | 2 |
-| homework.expression.ExpFunction.simplifyExpParentheses(String) | 9 | 11 | 14 |
-| homework.expression.ExpFunction.simplifyParentheses(String,int[]) | 1 | 1 | 8 |
-| homework.expression.ExpFunction.simplifySign(String) | 4 | 3 | 4 |
-| homework.expression.ExpParser.Exception.Exception(String) | 1 | 1 | 1 |
-| homework.expression.ExpParser.ExpParser(String) | 3 | 2 | 3 |
-| homework.expression.ExpParser.getItemAdd(String,boolean) | 5 | 6 | 9 |
-| homework.expression.ExpParser.getItemMul(String) | 4 | 3 | 5 |
-| homework.expression.ExpParser.matchParentheses() | 7 | 4 | 8 |
-| homework.expression.ExpParser.readOneItem(String) | 6 | 9 | 12 |
-| homework.expression.ExpParser.spliter() | 1 | 1 | 1 |
-| homework.expression.ExpSimplify.ExpSimplify(Derivable) | 1 | 2 | 2 |
-| homework.expression.ExpSimplify.OnlyOneDiff(Derivable,Derivable) | 9 | 17 | 26 |
-| homework.expression.ExpSimplify.getDiff(boolean,int,int,ItemMul,ItemMul) | 1 | 4 | 6 |
-| homework.expression.ExpSimplify.searchSimplify(ItemAdd) | 4 | 4 | 4 |
-| homework.expression.ExpSimplify.simplify() | 2 | 2 | 4 |
-| homework.polyitem.factor.Factor.Factor() | 1 | 1 | 1 |
-| homework.polyitem.factor.Factor.Factor(BigInteger) | 1 | 1 | 1 |
-| homework.polyitem.factor.Factor.getIndex() | 1 | 1 | 1 |
-| homework.polyitem.factor.Factor.setIndex(BigInteger) | 1 | 1 | 1 |
-| homework.polyitem.factor.Factor.updateIndex(BigInteger) | 1 | 1 | 1 |
-| homework.polyitem.factor.FactorExp.FactorExp() | 1 | 1 | 1 |
-| homework.polyitem.factor.FactorExp.FactorExp(ItemAdd) | 1 | 1 | 1 |
-| homework.polyitem.factor.FactorExp.FactorExp(ItemAdd,BigInteger) | 1 | 1 | 1 |
-| homework.polyitem.factor.FactorExp.clone() | 1 | 1 | 1 |
-| homework.polyitem.factor.FactorExp.derivate() | 4 | 4 | 5 |
-| homework.polyitem.factor.FactorExp.equals(Object) | 3 | 3 | 4 |
-| homework.polyitem.factor.FactorExp.equalsZero() | 1 | 1 | 1 |
-| homework.polyitem.factor.FactorExp.getExpression() | 1 | 1 | 1 |
-| homework.polyitem.factor.FactorExp.identity() | 1 | 1 | 1 |
-| homework.polyitem.factor.FactorExp.toString() | 1 | 4 | 4 |
-| homework.polyitem.factor.FactorFactory.readPower(Matcher) | 1 | 2 | 2 |
-| homework.polyitem.factor.FactorFactory.readTrian(Matcher) | 1 | 2 | 3 |
-| homework.polyitem.factor.FactorFactory.simplifyFunc(Derivable) | 2 | 4 | 5 |
-| homework.polyitem.factor.FuncConst.FuncConst() | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncConst.FuncConst(BigInteger) | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncConst.FuncConst(String) | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncConst.clone() | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncConst.derivate() | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncConst.equals(Object) | 2 | 2 | 2 |
-| homework.polyitem.factor.FuncConst.equalsOne() | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncConst.equalsZero() | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncConst.getValue() | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncConst.identity() | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncConst.setValue(BigInteger) | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncConst.toString() | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncConst.updateValue(BigInteger) | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncPower.FuncPower() | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncPower.FuncPower(BigInteger) | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncPower.clone() | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncPower.derivate() | 1 | 1 | 2 |
-| homework.polyitem.factor.FuncPower.equals(Object) | 2 | 2 | 2 |
-| homework.polyitem.factor.FuncPower.equalsZero() | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncPower.identity() | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncPower.toString() | 1 | 1 | 2 |
-| homework.polyitem.factor.FuncTrian.FuncTrian() | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncTrian.FuncTrian(boolean) | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncTrian.FuncTrian(boolean,BigInteger) | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncTrian.FuncTrian(boolean,ItemAdd) | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncTrian.FuncTrian(boolean,ItemAdd,BigInteger) | 1 | 1 | 1 |
-| homework.polyitem.factor.FuncTrian.clone() | 1 | 2 | 2 |
-| homework.polyitem.factor.FuncTrian.derivate() | 4 | 4 | 6 |
-| homework.polyitem.factor.FuncTrian.equals(Object) | 6 | 4 | 8 |
-| homework.polyitem.factor.FuncTrian.equalsZero() | 3 | 3 | 4 |
-| homework.polyitem.factor.FuncTrian.identity() | 1 | 4 | 5 |
-| homework.polyitem.factor.FuncTrian.toString() | 1 | 2 | 3 |
-| homework.polyitem.item.ItemAdd.ItemAdd() | 1 | 1 | 1 |
-| homework.polyitem.item.ItemAdd.ItemAdd(Derivable...) | 1 | 3 | 3 |
-| homework.polyitem.item.ItemAdd.ItemAdd(HashMap\<String, Derivable>) | 1 | 1 | 1 |
-| homework.polyitem.item.ItemAdd.ItemAddPut(Derivable) | 1 | 4 | 4 |
-| homework.polyitem.item.ItemAdd.PutItemMul(ItemMul) | 1 | 5 | 5 |
-| homework.polyitem.item.ItemAdd.clone() | 1 | 2 | 2 |
-| homework.polyitem.item.ItemAdd.derivate() | 2 | 2 | 3 |
-| homework.polyitem.item.ItemAdd.equals(Object) | 3 | 2 | 3 |
-| homework.polyitem.item.ItemAdd.equalsZero() | 3 | 2 | 3 |
-| homework.polyitem.item.ItemAdd.getAdditem() | 1 | 1 | 1 |
-| homework.polyitem.item.ItemAdd.getOnlyOne() | 4 | 2 | 4 |
-| homework.polyitem.item.ItemAdd.identity() | 1 | 1 | 1 |
-| homework.polyitem.item.ItemAdd.onlyContainOne() | 1 | 1 | 1 |
-| homework.polyitem.item.ItemAdd.toString() | 6 | 5 | 7 |
-| homework.polyitem.item.ItemMul.ItemMul() | 1 | 1 | 1 |
-| homework.polyitem.item.ItemMul.ItemMul(Derivable...) | 3 | 3 | 3 |
-| homework.polyitem.item.ItemMul.ItemMulPut(Derivable) | 3 | 5 | 6 |
-| homework.polyitem.item.ItemMul.PutFactor(Factor) | 6 | 10 | 10 |
-| homework.polyitem.item.ItemMul.PutItemMul(ItemMul) | 1 | 2 | 2 |
-| homework.polyitem.item.ItemMul.clone() | 1 | 2 | 2 |
-| homework.polyitem.item.ItemMul.derivate() | 6 | 2 | 7 |
-| homework.polyitem.item.ItemMul.equals(Object) | 3 | 2 | 3 |
-| homework.polyitem.item.ItemMul.equalsZero() | 3 | 2 | 3 |
-| homework.polyitem.item.ItemMul.getCoeff() | 2 | 2 | 2 |
-| homework.polyitem.item.ItemMul.getMutiitem() | 1 | 1 | 1 |
-| homework.polyitem.item.ItemMul.getOneExp() | 5 | 2 | 5 |
-| homework.polyitem.item.ItemMul.identity() | 2 | 3 | 4 |
-| homework.polyitem.item.ItemMul.negateCoeff(boolean) | 1 | 2 | 2 |
-| homework.polyitem.item.ItemMul.onlyOneExp() | 3 | 3 | 7 |
-| homework.polyitem.item.ItemMul.onlyOneFactor() | 4 | 3 | 7 |
-| homework.polyitem.item.ItemMul.removeItem(Derivable) | 1 | 2 | 2 |
-| homework.polyitem.item.ItemMul.setCoeffOne() | 1 | 1 | 1 |
-| homework.polyitem.item.ItemMul.toString() | 1 | 7 | 7 |
-| homework.polyitem.item.ItemMul.updateCoeff(BigInteger) | 1 | 1 | 1 |
+| Method                                                                   | ev(G) | iv(G) | v(G) |
+| ------------------------------------------------------------------------ | ----- | ----- | ---- |
+| homework.MainClass.main(String[])                                        | 1     | 2     | 2    |
+| homework.expression.ExpFunction.Exception.Exception(String)              | 1     | 1     | 1    |
+| homework.expression.ExpFunction.deleteSpace(String)                      | 3     | 7     | 10   |
+| homework.expression.ExpFunction.matchParentheses(String,int)             | 6     | 6     | 7    |
+| homework.expression.ExpFunction.readIndex(String)                        | 2     | 1     | 2    |
+| homework.expression.ExpFunction.simplifyExpParentheses(String)           | 9     | 11    | 14   |
+| homework.expression.ExpFunction.simplifyParentheses(String,int[])        | 1     | 1     | 8    |
+| homework.expression.ExpFunction.simplifySign(String)                     | 4     | 3     | 4    |
+| homework.expression.ExpParser.Exception.Exception(String)                | 1     | 1     | 1    |
+| homework.expression.ExpParser.ExpParser(String)                          | 3     | 2     | 3    |
+| homework.expression.ExpParser.getItemAdd(String,boolean)                 | 5     | 6     | 9    |
+| homework.expression.ExpParser.getItemMul(String)                         | 4     | 3     | 5    |
+| homework.expression.ExpParser.matchParentheses()                         | 7     | 4     | 8    |
+| homework.expression.ExpParser.readOneItem(String)                        | 6     | 9     | 12   |
+| homework.expression.ExpParser.spliter()                                  | 1     | 1     | 1    |
+| homework.expression.ExpSimplify.ExpSimplify(Derivable)                   | 1     | 2     | 2    |
+| homework.expression.ExpSimplify.OnlyOneDiff(Derivable,Derivable)         | 9     | 17    | 26   |
+| homework.expression.ExpSimplify.getDiff(boolean,int,int,ItemMul,ItemMul) | 1     | 4     | 6    |
+| homework.expression.ExpSimplify.searchSimplify(ItemAdd)                  | 4     | 4     | 4    |
+| homework.expression.ExpSimplify.simplify()                               | 2     | 2     | 4    |
+| homework.polyitem.factor.Factor.Factor()                                 | 1     | 1     | 1    |
+| homework.polyitem.factor.Factor.Factor(BigInteger)                       | 1     | 1     | 1    |
+| homework.polyitem.factor.Factor.getIndex()                               | 1     | 1     | 1    |
+| homework.polyitem.factor.Factor.setIndex(BigInteger)                     | 1     | 1     | 1    |
+| homework.polyitem.factor.Factor.updateIndex(BigInteger)                  | 1     | 1     | 1    |
+| homework.polyitem.factor.FactorExp.FactorExp()                           | 1     | 1     | 1    |
+| homework.polyitem.factor.FactorExp.FactorExp(ItemAdd)                    | 1     | 1     | 1    |
+| homework.polyitem.factor.FactorExp.FactorExp(ItemAdd,BigInteger)         | 1     | 1     | 1    |
+| homework.polyitem.factor.FactorExp.clone()                               | 1     | 1     | 1    |
+| homework.polyitem.factor.FactorExp.derivate()                            | 4     | 4     | 5    |
+| homework.polyitem.factor.FactorExp.equals(Object)                        | 3     | 3     | 4    |
+| homework.polyitem.factor.FactorExp.equalsZero()                          | 1     | 1     | 1    |
+| homework.polyitem.factor.FactorExp.getExpression()                       | 1     | 1     | 1    |
+| homework.polyitem.factor.FactorExp.identity()                            | 1     | 1     | 1    |
+| homework.polyitem.factor.FactorExp.toString()                            | 1     | 4     | 4    |
+| homework.polyitem.factor.FactorFactory.readPower(Matcher)                | 1     | 2     | 2    |
+| homework.polyitem.factor.FactorFactory.readTrian(Matcher)                | 1     | 2     | 3    |
+| homework.polyitem.factor.FactorFactory.simplifyFunc(Derivable)           | 2     | 4     | 5    |
+| homework.polyitem.factor.FuncConst.FuncConst()                           | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncConst.FuncConst(BigInteger)                 | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncConst.FuncConst(String)                     | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncConst.clone()                               | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncConst.derivate()                            | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncConst.equals(Object)                        | 2     | 2     | 2    |
+| homework.polyitem.factor.FuncConst.equalsOne()                           | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncConst.equalsZero()                          | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncConst.getValue()                            | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncConst.identity()                            | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncConst.setValue(BigInteger)                  | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncConst.toString()                            | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncConst.updateValue(BigInteger)               | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncPower.FuncPower()                           | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncPower.FuncPower(BigInteger)                 | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncPower.clone()                               | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncPower.derivate()                            | 1     | 1     | 2    |
+| homework.polyitem.factor.FuncPower.equals(Object)                        | 2     | 2     | 2    |
+| homework.polyitem.factor.FuncPower.equalsZero()                          | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncPower.identity()                            | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncPower.toString()                            | 1     | 1     | 2    |
+| homework.polyitem.factor.FuncTrian.FuncTrian()                           | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncTrian.FuncTrian(boolean)                    | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncTrian.FuncTrian(boolean,BigInteger)         | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncTrian.FuncTrian(boolean,ItemAdd)            | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncTrian.FuncTrian(boolean,ItemAdd,BigInteger) | 1     | 1     | 1    |
+| homework.polyitem.factor.FuncTrian.clone()                               | 1     | 2     | 2    |
+| homework.polyitem.factor.FuncTrian.derivate()                            | 4     | 4     | 6    |
+| homework.polyitem.factor.FuncTrian.equals(Object)                        | 6     | 4     | 8    |
+| homework.polyitem.factor.FuncTrian.equalsZero()                          | 3     | 3     | 4    |
+| homework.polyitem.factor.FuncTrian.identity()                            | 1     | 4     | 5    |
+| homework.polyitem.factor.FuncTrian.toString()                            | 1     | 2     | 3    |
+| homework.polyitem.item.ItemAdd.ItemAdd()                                 | 1     | 1     | 1    |
+| homework.polyitem.item.ItemAdd.ItemAdd(Derivable...)                     | 1     | 3     | 3    |
+| homework.polyitem.item.ItemAdd.ItemAdd(HashMap\<String, Derivable>)      | 1     | 1     | 1    |
+| homework.polyitem.item.ItemAdd.ItemAddPut(Derivable)                     | 1     | 4     | 4    |
+| homework.polyitem.item.ItemAdd.PutItemMul(ItemMul)                       | 1     | 5     | 5    |
+| homework.polyitem.item.ItemAdd.clone()                                   | 1     | 2     | 2    |
+| homework.polyitem.item.ItemAdd.derivate()                                | 2     | 2     | 3    |
+| homework.polyitem.item.ItemAdd.equals(Object)                            | 3     | 2     | 3    |
+| homework.polyitem.item.ItemAdd.equalsZero()                              | 3     | 2     | 3    |
+| homework.polyitem.item.ItemAdd.getAdditem()                              | 1     | 1     | 1    |
+| homework.polyitem.item.ItemAdd.getOnlyOne()                              | 4     | 2     | 4    |
+| homework.polyitem.item.ItemAdd.identity()                                | 1     | 1     | 1    |
+| homework.polyitem.item.ItemAdd.onlyContainOne()                          | 1     | 1     | 1    |
+| homework.polyitem.item.ItemAdd.toString()                                | 6     | 5     | 7    |
+| homework.polyitem.item.ItemMul.ItemMul()                                 | 1     | 1     | 1    |
+| homework.polyitem.item.ItemMul.ItemMul(Derivable...)                     | 3     | 3     | 3    |
+| homework.polyitem.item.ItemMul.ItemMulPut(Derivable)                     | 3     | 5     | 6    |
+| homework.polyitem.item.ItemMul.PutFactor(Factor)                         | 6     | 10    | 10   |
+| homework.polyitem.item.ItemMul.PutItemMul(ItemMul)                       | 1     | 2     | 2    |
+| homework.polyitem.item.ItemMul.clone()                                   | 1     | 2     | 2    |
+| homework.polyitem.item.ItemMul.derivate()                                | 6     | 2     | 7    |
+| homework.polyitem.item.ItemMul.equals(Object)                            | 3     | 2     | 3    |
+| homework.polyitem.item.ItemMul.equalsZero()                              | 3     | 2     | 3    |
+| homework.polyitem.item.ItemMul.getCoeff()                                | 2     | 2     | 2    |
+| homework.polyitem.item.ItemMul.getMutiitem()                             | 1     | 1     | 1    |
+| homework.polyitem.item.ItemMul.getOneExp()                               | 5     | 2     | 5    |
+| homework.polyitem.item.ItemMul.identity()                                | 2     | 3     | 4    |
+| homework.polyitem.item.ItemMul.negateCoeff(boolean)                      | 1     | 2     | 2    |
+| homework.polyitem.item.ItemMul.onlyOneExp()                              | 3     | 3     | 7    |
+| homework.polyitem.item.ItemMul.onlyOneFactor()                           | 4     | 3     | 7    |
+| homework.polyitem.item.ItemMul.removeItem(Derivable)                     | 1     | 2     | 2    |
+| homework.polyitem.item.ItemMul.setCoeffOne()                             | 1     | 1     | 1    |
+| homework.polyitem.item.ItemMul.toString()                                | 1     | 7     | 7    |
+| homework.polyitem.item.ItemMul.updateCoeff(BigInteger)                   | 1     | 1     | 1    |
 
 MetricReloaded分析程序复杂度更加病态了，大量方法的结构化程度存在问题，并且集中在与化简有关的方法中。表达式解析中的readOneItem()方法三项均超标，虽然我已经进行了采用了一部分的工厂模式、将正则表达式存入单独的类中以被调用的解耦合的努力。
 
 **Package复杂度：**
 
-| Package | v(G)avg | v(G)tot |
-| \------------------------ | ------- | ------- |
-| homework | 2 | 2 |
-| homework.expression | 6.68 | 127 |
-| homework.polyitem.factor | 1.86 | 93 |
-| homework.polyitem.item | 3.38 | 115 |
+| Package                  | v(G)avg | v(G)tot |
+| ------------------------ | ------- | ------- |
+| homework                 | 2       | 2       |
+| homework.expression      | 6.68    | 127     |
+| homework.polyitem.factor | 1.86    | 93      |
+| homework.polyitem.item   | 3.38    | 115     |
 
 通过分包，将几大功能区分开（不过这次看到20%的性能分，增加了暴力搜索提取公因式的简化方法，还是放在Exp处理中，所以耦合度也有点高）。
 

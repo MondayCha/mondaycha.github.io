@@ -58,7 +58,7 @@ def wiki_link_plugin(md: MarkdownIt) -> None:
     md.inline.ruler.before("link", "wiki_link", _parse_wiki_links)
 
 
-md = MarkdownIt()
+md = MarkdownIt().enable("table")
 md.use(front_matter.front_matter_plugin)
 md.use(texmath.texmath_plugin)
 md.use(wiki_link_plugin)
@@ -70,6 +70,9 @@ def collect_file_index(input_dir):
     for root, _, files in os.walk(input_dir):
         for file in files:
             name, ext = os.path.splitext(file)
+            # ignore .DS_Store
+            if name == ".DS_Store":
+                continue
             if ext != ".md":
                 name = file
             file_path = os.path.join(root, file)
@@ -212,10 +215,17 @@ def process_files(input_dir, output_dir, file_index: dict):
             relative_path = os.path.relpath(input_path, input_dir)
             output_path = os.path.join(output_dir, relative_path)
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
+            # ignore excalidraw files
             if file.endswith(".excalidraw.md"):
-                # ignore excalidraw files
                 continue
-            elif file.endswith(".md"):
+            # ignore .DS_Store
+            if file == ".DS_Store":
+                continue
+            # ignore .pdf or .html files
+            if file.endswith(".pdf") or file.endswith(".html"):
+                continue
+            # include markdown files
+            if file.endswith(".md"):
                 process_file(input_path, output_path, file_index, root)
             else:
                 shutil.copy2(input_path, output_path)

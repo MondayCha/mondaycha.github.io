@@ -58,10 +58,10 @@ MapInits       = Expr ":" Expr {"," Expr ":" Expr} ;
 
 Values in CEL represent any of the following:
 
-| Type | Description |
-| \-------- | ---------------------------------- |
-| `int` | 64-bit signed integers |
-| `uint` | 64-bit unsigned integers |
+| Type     | Description                        |
+| -------- | ---------------------------------- |
+| `int`    | 64-bit signed integers             |
+| `uint`   | 64-bit unsigned integers           |
 | `double` | 64-bit IEEE floating-point numbers |
 
 ## Kwok 中的应用

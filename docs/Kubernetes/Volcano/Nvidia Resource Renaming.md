@@ -83,11 +83,11 @@ helm upgrade -i nvdp nvdp/nvidia-device-plugin \
 
 Here is a brief explanation of some of the configuration parameters:
 
-| Command | Usage |
-| \-------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--set gfd.enabled=true` | Enables the GFD feature. If you already have NFD deployed on your cluster and do not wish for it to be pulled in by this installation, you can disable it with `nfd.enabled=false`. |
-| `--set image.repository`<br/>`--set image.tag` | Replaces the official image with the modified version. |
-| `--set config.default`<br/>`--set-file config.map` | Sets the ConfigMap for the Device Plugin to configure resource renaming rules. |
+| Command                                            | Usage                                                                                                                                                                               |
+| -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--set gfd.enabled=true`                           | Enables the GFD feature. If you already have NFD deployed on your cluster and do not wish for it to be pulled in by this installation, you can disable it with `nfd.enabled=false`. |
+| `--set image.repository`<br/>`--set image.tag`     | Replaces the official image with the modified version.                                                                                                                              |
+| `--set config.default`<br/>`--set-file config.map` | Sets the ConfigMap for the Device Plugin to configure resource renaming rules.                                                                                                      |
 
 If you wish to set multiple ConfigMaps to allow different policies for different nodes or configure Time Slicing, refer to the [documentation](../../README.md#multiple-config-file-example) for more information.
 

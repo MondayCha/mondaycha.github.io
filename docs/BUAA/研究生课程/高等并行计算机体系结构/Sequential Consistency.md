@@ -9,7 +9,7 @@
 
 在中文翻译里，缓存一致性 (Conherence) 和内存一致性 (Consistency) 中的”一致性”相同，但意义是不同的。
 
-![Pasted image 20231111163213.png](accachments/Pasted%20image%2020231111163213.png)
+![coherence.png](accachments/coherence.png)
 
 前者关注多个 CPU 对同一内存地址的读写顺序，后者关注多个 CPU 对所有内存地址的读写顺序。
 
@@ -17,7 +17,7 @@
 
 多个 CPU 对所有内存地址的读写会带来哪些问题？
 
-![Pasted image 20231111160527.png](accachments/Pasted%20image%2020231111160527.png)
+![reorder.png](accachments/reorder.png)
 
 CPU 指令乱序执行：由于 CPU 乱序只保证单线程语义，因此无法解析因果关系。
 
@@ -25,7 +25,7 @@ Store-store reordering：如果某个 core 使用 non-FIFO write buffer，那么
 
 即使 core 没有改变指令的执行顺序，这样的 reordering 也可能发生。
 
-![Pasted image 20231111161145.png](accachments/Pasted%20image%2020231111161145.png)
+![reorder2.png](accachments/reorder2.png)
 
 这个执行满足缓存一致性，因为没有违反 SWMR 属性（就是说在任意时刻只能有一个写者或多个读者），但并不符合我们对因果的认知。
 
