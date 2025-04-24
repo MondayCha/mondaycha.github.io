@@ -2,7 +2,15 @@
   // This file is not used in compilation. It is here just for a nice editor experience.
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@site/*": [
+        "./*"
+      ], // Docusaurus's path alias
+      "@/*": [
+        "./src/*"
+      ] // Shadcn UI's expected path alias
+    }
   },
   "exclude": [".docusaurus", "build"]
 }

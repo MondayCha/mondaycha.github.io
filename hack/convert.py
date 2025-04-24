@@ -5,11 +5,13 @@ import shutil
 from markdown_it import MarkdownIt
 from markdown_it.token import Token
 from mdit_py_plugins import front_matter
+from mdit_py_plugins import footnote
 from mdit_py_plugins import texmath
 from mdformat.renderer import MDRenderer
 import mdformat_tables
 import mdformat_frontmatter
 import mdformat_myst
+import mdformat_footnote
 from markdown_it.rules_inline import StateInline
 
 
@@ -62,6 +64,7 @@ md = MarkdownIt().enable("table")
 md.use(front_matter.front_matter_plugin)
 md.use(texmath.texmath_plugin)
 md.use(wiki_link_plugin)
+md.use(footnote.footnote_plugin)
 
 
 def collect_file_index(input_dir):
@@ -199,7 +202,8 @@ def process_file(input_path, output_path, file_index: dict, current_dir):
             mdformat_tables.plugin,
             mdformat_frontmatter.plugin,
             mdformat_myst.plugin,
-        ]
+            mdformat_footnote.plugin,
+        ],
     }
     env = {}
 

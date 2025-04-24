@@ -380,9 +380,10 @@ CSDN旗下的新媒体矩阵则涵盖开发招聘、人工智能、大数据、�
 
 # 5. 参考资料
 
-\[^1\]: Bug等级划分 | https://wenku.baidu.com/view/f2a55ab8d15abe23482f4d80.html
-\[^2\]: Where Do The World's Software Developers Live? | https://www.benfrederickson.com/github-developer-locations/
-
 :::note
 这是一篇搬运自博客园的文章，发表于 2021-04-09 01:42。
 :::
+
+[^1]: Bug等级划分 | https://wenku.baidu.com/view/f2a55ab8d15abe23482f4d80.html
+
+[^2]: Where Do The World's Software Developers Live? | https://www.benfrederickson.com/github-developer-locations/

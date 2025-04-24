@@ -3,6 +3,7 @@ import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-di
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import tailwindPlugin from "./plugins/tailwind-config.cjs";
+import aliasPlugin from "./plugins/alias-config.cjs";
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
@@ -21,7 +22,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "radis-lab", // Usually your GitHub org/user name.
+  organizationName: "mondaycha", // Usually your GitHub org/user name.
   projectName: "l1l-document", // Usually your repo name.
 
   onBrokenLinks: "warn",
@@ -31,7 +32,10 @@ const config: Config = {
     mermaid: true,
   },
 
-  plugins: [tailwindPlugin],
+  plugins: [
+    tailwindPlugin,
+    aliasPlugin,
+  ],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -47,7 +51,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          routeBasePath: '/',
+          // routeBasePath: '/',
           beforeDefaultRemarkPlugins: [
             remarkGithubAdmonitionsToDirectives
           ],

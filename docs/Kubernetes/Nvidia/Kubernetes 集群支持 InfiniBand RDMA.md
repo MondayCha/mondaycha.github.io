@@ -1023,12 +1023,20 @@ IB device mlx5_bond_0 not found
 
 但跑 vLLM 的时候会报错，有待后续解决。
 
-______________________________________________________________________
+## 总结
 
-\[^1\]: [2 个 RoCE 网卡 Bond 聚合，实现带宽 X2-云社区-华为云](https://bbs.huaweicloud.com/blogs/412088)
-\[^2\]: [RDG for Accelerated K8s Cluster over NVIDIA DGX A100 Servers and 200Gbps Ethernet Network Fabric](https://docs.nvidia.com/networking/display/public/sol/rdg+for+accelerated+k8s+cluster+over+nvidia+dgx+a100+servers+and+200gbps+ethernet+network+fabric)
-\[^3\]: [Enhance documentaitons · Issue #54 · Mellanox/k8s-rdma-shared-dev-plugin](https://github.com/Mellanox/k8s-rdma-shared-dev-plugin/issues/54)
-\[^4\]: [Multus-CNI 与 whereabouts 的简单运用 - 剑轩的专栏 - TNBLOG](https://www.tnblog.net/aojiancc2/article/details/7929)
-\[^5\]: [hostdevice-network-pod1.yml](https://github.com/Mellanox/network-operator/tree/master/example)
-\[^6\]: [理想与现实  - Infiniband 和以太网的抉择   -  雪球](https://xueqiu.com/2448317325/292453176?md5__1038=eqAxgDyDuD0jQGXBDrDcQ8FKiIwx8iD)
-\[^7\]: [Distributed Inference and Serving](https://docs.vllm.ai/en/stable/serving/distributed_serving.html)
+以上记录了在本地 Kubernetes 集群接入 RDMA 的过程。目前来看相关文档的缺失是阻碍这方面学习的主要因素，后续希望能深入学习更多的接入方式，解决 A100 的问题。
+
+[^2]: [RDG for Accelerated K8s Cluster over NVIDIA DGX A100 Servers and 200Gbps Ethernet Network Fabric](https://docs.nvidia.com/networking/display/public/sol/rdg+for+accelerated+k8s+cluster+over+nvidia+dgx+a100+servers+and+200gbps+ethernet+network+fabric)
+
+[^6]: [理想与现实  - Infiniband 和以太网的抉择   -  雪球](https://xueqiu.com/2448317325/292453176?md5__1038=eqAxgDyDuD0jQGXBDrDcQ8FKiIwx8iD)
+
+[^1]: [2 个 RoCE 网卡 Bond 聚合，实现带宽 X2-云社区-华为云](https://bbs.huaweicloud.com/blogs/412088)
+
+[^3]: [Enhance documentaitons · Issue #54 · Mellanox/k8s-rdma-shared-dev-plugin](https://github.com/Mellanox/k8s-rdma-shared-dev-plugin/issues/54)
+
+[^4]: [Multus-CNI 与 whereabouts 的简单运用 - 剑轩的专栏 - TNBLOG](https://www.tnblog.net/aojiancc2/article/details/7929)
+
+[^5]: [hostdevice-network-pod1.yml](https://github.com/Mellanox/network-operator/tree/master/example)
+
+[^7]: [Distributed Inference and Serving](https://docs.vllm.ai/en/stable/serving/distributed_serving.html)
