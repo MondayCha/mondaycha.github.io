@@ -6,6 +6,8 @@ is_public: true
 
 ## 堆
 
+堆顶的元素位于 Index 为 0 的位置。
+
 ```go
 package main
 
@@ -62,7 +64,11 @@ import (
 )
 
 func main() {
-	meetings := [][]int{{1,2},{2,3},{3,4}}
+	meetings := [][]int{}
+	meetings = append(meetings, {1,2})
+	meetings = append(meetings, {3,4})
+	meetings = append(meetings, {2,3})
+
 	sort.Slice(meetings, func (i, j int) bool {
 		return meetings[i][0] < meetings[i][1]
 	})
@@ -85,7 +91,7 @@ import (
 func main() {
     array := []int{67, 45, 81, 2, 47, 21, 12}
     fmt.Println("Before:", array)
-    
+
     array = quickSort(array)
     fmt.Println("After:", array)
 }

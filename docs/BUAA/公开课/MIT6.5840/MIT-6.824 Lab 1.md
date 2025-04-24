@@ -10,7 +10,7 @@
 
 2022 版安装文档 [6.824 Go (mit.edu)](https://pdos.csail.mit.edu/6.824/labs/go.html) 指出 Windows 端的 WSL 似乎存在问题，但为了方便，我打算先尝试 VSCode+WSL2 的方案。
 
-在 Windows 平台安装 Ubuntu 22.04 LTS 版本，一些配置参考 [WSL 安装 Oh My Zsh](WSL%20%E5%AE%89%E8%A3%85%20Oh%20My%20Zsh.md) ，遇到的新问题如下：
+在 Windows 平台安装 Ubuntu 22.04 LTS 版本，一些配置参考 WSL 安装 Oh My Zsh，遇到的新问题如下：
 
 - [windows subsystem for linux - Ubuntu 22.04 LTS on WSL: "Failed to retrieve available kernel versions"/"Failed to check for processor microcode upgrades" when installing packages - Ask Ubuntu](https://askubuntu.com/questions/1404129/ubuntu-22-04-lts-on-wsl-failed-to-retrieve-available-kernel-versions-failed)
 - [[Question] How to remove Windows pathes from WSL PATH? · Issue #1493 · microsoft/WSL (github.com)](https://github.com/microsoft/WSL/issues/1493)

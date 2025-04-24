@@ -4,7 +4,7 @@
 
 ## Homework
 
-[Homework 2](Homework%202.md)
+[Homework 2](../Homework/Homework%202.md)
 
 ## References
 

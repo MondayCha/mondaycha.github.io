@@ -474,6 +474,52 @@ spec:
 
 我猜测可能是 NCCL 需要指定网卡之类的？由于后来 RDMA Shared Device Plugin 跑通了，我没有继续深入研究这一部分，也许向官方提出我的困惑也是一种好选择。
 
+To clean up stale resources, you can start `kubectl proxy` in one terminal:
+
+```shell
+$ kubectl proxy
+Starting to serve on 127.0.0.1:8001
+```
+
+And in another terminal, run the cleanup script (note `/` needs to be escaped as `~1`):
+
+```bash
+#!/bin/bash
+
+# Check if at least one node name is provided
+if [ "$#" -lt 1 ]; then
+  echo "Usage: $0 <node-name> [<node-name>...]"
+  exit 1
+fi
+
+# Prepare the JSON patch data
+PATCH_DATA=$(cat <<EOF
+[
+  {"op": "remove", "path": "/status/capacity/nvidia.com~1hostdev"}
+]
+EOF
+)
+
+# Iterate over each node name provided as an argument
+for NODE_NAME in "$@"
+do
+  # Execute the PATCH request
+  curl --header "Content-Type: application/json-patch+json" \
+       --request PATCH \
+       --data "$PATCH_DATA" \
+       http://127.0.0.1:8001/api/v1/nodes/$NODE_NAME/status
+
+  echo "Patch request sent for node $NODE_NAME"
+done
+```
+
+Pass the node name and clean up:
+
+```shell
+chmod +x ./patch_node_gpu.sh
+./patch_node_gpu.sh node1 node2
+```
+
 ## 验证 RDMA 的安装
 
 这一节，我们将介绍基于 RDMA Shared Device Plugin 的方法，如何继续验证 RDMA 的安装。

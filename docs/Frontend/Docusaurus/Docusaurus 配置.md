@@ -65,3 +65,5 @@ pnpm dlx tailwindcss init
 ```
 
 ## Obsidian to Docusaurus
+
+[Docusaurus 联动 Obsidian](Docusaurus%20%E8%81%94%E5%8A%A8%20Obsidian.md)
